@@ -12,10 +12,11 @@ const HeaderPagesSection = () => {
         style={{ backgroundImage: `url(${MarvelHeader})` }}
         className={classes.container}
       />
-      <Grid item xs={4} className={classes.projectMarvelText}>
-        Project Marvel
+      <Grid container justifyContent="center" alignItems="center" style={{ height: "8vh" }}>
+        <Grid item xs={6} className={classes.projectMarvelText}>
+          fariachagas@hotmail.com
       </Grid>
-      <Grid container className={classes.containerHeader} item xs={4}>
+        <Grid container className={classes.containerHeader} item xs={6}>
         <Input
           className={classes.input}
           id="outlined-basic"
@@ -23,6 +24,7 @@ const HeaderPagesSection = () => {
         />
         <Button className={classes.button}>Recherche</Button>
       </Grid>
+    </Grid>
     </Grid>
   );
 };
