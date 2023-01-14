@@ -1,11 +1,12 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import { Grid } from '@material-ui/core'
-
+import { Grid, Typography } from '@material-ui/core'
+import useStylesCards from '../components/cards/cards.styles'
 interface ICharacter {
   thumbnail: { extension: string, path: string }
   name: string
+  description: string
 }
 
 interface Idata {
@@ -20,16 +21,31 @@ const MiddlePagesSection = () => {
     return data.data
   }
 
+  const classes = useStylesCards()
+
+
   const { data: dataCharacter, isLoading } = useQuery(["getAllData"], getData)
-  console.log(dataCharacter)
+  console.log(dataCharacter?.results.filter((fil => fil.description.length > 0)))
   return isLoading ? null : (
     <Grid container justifyContent='center'>
       <Grid container justifyContent='center' item xs={10} style={{ marginTop: "1%" }}>
+
         {dataCharacter?.results.map((value =>
-          <Grid container justifyContent='center' item xs={3}>
+          <Grid className={classes.containerCards} container item xs={3}>
+
+
             <img alt=""
-              style={{ marginBottom: "5%", height: 350, width: "90%", boxShadow: "0px 0px 9px 2px grey" }}
+              className={classes.img}
               src={value.thumbnail.path + '.' + value.thumbnail.extension} />
+            <Typography component={"p"} className={classes.typography}>
+              {value.description}
+            </Typography>
+
+
+            <Grid component={"div"} className={classes.face1} >
+              {value.name}
+            </Grid>
+
           </Grid>
         ))
         }
