@@ -8,7 +8,7 @@ const HeaderPagesSection = () => {
 
   return (
     <Grid className={classes.containerHeader} container>
-      <Grid
+      <div
         style={{ backgroundImage: `url(${MarvelHeader})` }}
         className={classes.container}
       />
