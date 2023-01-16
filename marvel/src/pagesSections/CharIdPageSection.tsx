@@ -7,6 +7,7 @@ const CharIdPageSection = (data: { data: ICharacterCard }) => {
 
     const classes = useStylesCharId()
     const { thumbnail, description, name } = data.data
+
     return (
         <Grid className={classes.container} container item xs={8}>
             <Grid item xs={6}>
