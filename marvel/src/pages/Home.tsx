@@ -17,7 +17,7 @@ function Home() {
   return isLoading ? null : (
     <Grid container justifyContent='center'>
       <Grid container item xs={10}>
-        {dataCharacter?.results.map((value, index: number) =>
+        {dataCharacter?.results.map((value: any, index: number) =>
           <CharsPageSection data={value} key={index} />
         )}
       </Grid>
