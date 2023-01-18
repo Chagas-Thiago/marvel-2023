@@ -7,16 +7,6 @@ import CustomModal from '../components/modal/modal'
 import CharIdPageSection from '../pagesSections/CharIdPageSection'
 import ComicsPageSection from '../pagesSections/ComicsPageSection'
 import { IDataComics } from '../utils/type'
-import Slide from '@material-ui/core/Slide';
-import { TransitionProps } from '@material-ui/core/transitions';
-
-const Transition = React.forwardRef(function Transition(
-    props: TransitionProps & { children?: React.ReactElement<any, any> },
-    ref: React.Ref<unknown>,
-) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
-
 
 
 const CharIdPage = () => {
@@ -36,40 +26,17 @@ const CharIdPage = () => {
         ["getComics"],
         getData, { cacheTime: 0 }
     )
-    console.log(title)
+
     return isLoading ? null : (
         <Grid container justifyContent='center' item>
 
             <CustomModal
-                style={{ transition: "1.5s" }}
-                maxWidth="md"
                 open={open}
-                onClose={() => setOpen(false)}
-                TransitionComponent={Transition}
-            >
-                <Grid style={{ transition: "1.5s" }} onClick={() => setOpen(false)} container alignItems='center'>
-                    <Grid container alignItems='center' item xs={3}>
-                        <img alt=""
-                            style={{ height: "99%", width: "100%" }}
-                            src={image}
-                        />
-                    </Grid>
-
-                    <Grid style={{ padding: 10 }} item xs={9}>
-                        <p style={{
-                            textAlign: "center",
-                            color: "red",
-                            fontSize: 30,
-                            fontWeight: "bold",
-                            textShadow: "black 1px 0 2px"
-                        }}>
-                            {title}
-                        </p>
-                        {description}
-                    </Grid>
-
-                </Grid>
-            </CustomModal>
+                image={image}
+                title={title}
+                description={description}
+                setOpen={setOpen}
+            />
             <Grid container justifyContent='center' item xs={10}>
 
                 <CharIdPageSection data={state} />
