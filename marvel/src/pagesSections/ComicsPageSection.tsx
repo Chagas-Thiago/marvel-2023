@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
-import CardComics from '../components/cardComics'
+import CardComics from '../components/cards/cardComics'
 
 const ComicsPageSection = (
     {

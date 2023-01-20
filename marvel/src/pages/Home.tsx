@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Grid } from '@material-ui/core'
 import { Idata } from '../utils/type'
 import PaginationButtons from '../components/paginationButtons/paginationButtons'
+import LogoContainer from '../components/logocontainer/logoContainer'
 
 function Home() {
   const [pagination, setPagination] = useState(8)
@@ -29,7 +30,9 @@ function Home() {
 
   return isLoading ? null : (
     <Grid container justifyContent='center'>
-
+      <Grid container justifyContent='flex-start' item xs={1}>
+        <LogoContainer />
+      </Grid>
       <Grid container item xs={10}>
         {dataCharacter?.results.map((value, index: number) =>
           <CharsPageSection data={value} key={index} />

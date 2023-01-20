@@ -18,7 +18,7 @@ const PaginationButtons = ({ pagination, setPagination }: IPaginationButtons) =>
             <p style={{ color: 'white' }}>Voir moins</p>
             <Button onClick={() => setPagination(pagination > 8 ? pagination - 8 : 8)}
                 style={{
-                    backgroundColor: "red",
+                    backgroundColor: "darkred",
                     opacity: pagination === 8 ? 0.5 : 1,
                     fontSize: 30,
                     boxShadow: "0px 0px 2px 0px white",
@@ -31,7 +31,7 @@ const PaginationButtons = ({ pagination, setPagination }: IPaginationButtons) =>
             <Button
                 onClick={Plus}
                 style={{
-                    backgroundColor: "red",
+                    backgroundColor: "darkred",
                     fontSize: 30,
                     boxShadow: "0px 0px 2px 0px white",
                     borderRadius: 5,

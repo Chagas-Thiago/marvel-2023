@@ -1,5 +1,5 @@
 import { Grid } from '@material-ui/core'
-import useStylesCards from './cards/cards.styles'
+import useStylesCards from './cards.styles'
 
 
 const CardComics = ({
