@@ -5,11 +5,11 @@ export interface ICharacter {
     id: number
 }
 export interface ICharacterCard {
-    thumbnail: string
-    description: string
-    name: string,
+    thumbnail?: string
+    description?: string
+    name?: string,
     onClick?: any
-    id: number
+    id?: number
 }
 export interface Idata {
     data: { results: ICharacter[] } | undefined
