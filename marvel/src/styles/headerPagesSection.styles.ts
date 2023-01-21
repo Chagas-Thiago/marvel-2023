@@ -8,18 +8,20 @@ const useStylesHeader = makeStyles((theme) => ({
         },
     },
     containerHeader: {
-        backgroundColor: "#3B3B3B",
-        justifyContent: "space-around"
+        backgroundColor: "#ffff",
+        justifyContent: "center",
+
     },
     container: {
         height: 100,
-        width: "100%"
+        width: "100%",
+        boxShadow: "0px 0px 5px 1px black",
     },
     projectMarvelText: {
         color: "white",
         textAlign: "center"
     },
-    containerInputeAndaBottom: {
+    containerInputeBottom: {
         height: 45,
         alignItems: "center"
     },
@@ -27,9 +29,11 @@ const useStylesHeader = makeStyles((theme) => ({
         height: 35,
         borderRadius: 5,
         width: "50%",
-        backgroundColor: "#ffff"
+        backgroundColor: "#ffff",
+        boxShadow: "0px 0px 4px 0px black"
     },
     button: {
+        boxShadow: "0px 0px 4px 0px black",
         marginLeft: "1%",
         height: 35,
         backgroundColor: "#EE1C25"
