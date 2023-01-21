@@ -1,5 +1,4 @@
-import { GitHub } from '@material-ui/icons'
-
+import GitHub from '../assets/logosSocial/github.png'
 import Insta from "../assets/logosSocial/insta.png"
 import Twitter from "../assets/logosSocial/twitter.png"
 import Linkedin from "../assets/logosSocial/linkedin.png"
@@ -9,26 +8,27 @@ export const socialLinks = [
     {
         icon: GitHub,
         alt: "GitHub",
-        onClick: () => window.location.href = 'sssss',
-    },
-    {
-        icon: Twitter,
-        alt: "Twitter",
-        onClick: () => console.log("Twitter clicked"),
+        onClick: () => window.open('https://github.com/Chagas-Thiago/marvel-2023', '_blank')
     },
     {
         icon: Linkedin,
         alt: "Linkedin",
-        onClick: () => console.log("Linkedin clicked"),
+        onClick: () => window.open("https://www.linkedin.com/in/thiago-faria-chagas-4a63271b1/", '_blank')
     },
+    {
+        icon: Twitter,
+        alt: "Twitter",
+        onClick: () => window.open("https://twitter.com/ThiagoV34252210", '_blank')
+    },
+
     {
         icon: Insta,
         alt: "Instagram",
-        onClick: () => console.log("Instagram clicked"),
+        onClick: () => window.open("https://www.instagram.com/thiago_vinicius_bh/", '_blank')
     },
     {
         icon: Hotmail,
         alt: "Hotmail",
-        onClick: () => console.log("Hotmail clicked"),
+        onClick: () => window.location.href = 'mailto:fariachagas@hotmail.com'
     },
 ];

@@ -15,7 +15,7 @@ const PaginationButtons = ({ pagination, setPagination }: IPaginationButtons) =>
     return (
 
         <Grid style={{ paddingBottom: 20 }} container justifyContent='center'>
-            <p style={{ color: 'white' }}>Voir moins</p>
+            <p style={{ color: 'white' }}>See less</p>
             <Button onClick={() => setPagination(pagination > 8 ? pagination - 8 : 8)}
                 style={{
                     backgroundColor: "darkred",
@@ -40,7 +40,7 @@ const PaginationButtons = ({ pagination, setPagination }: IPaginationButtons) =>
                 }}>
                 <ImArrowDown style={{ color: 'black' }} />
             </Button>
-            <p style={{ color: 'white' }}>Voir plus</p>
+            <p style={{ color: 'white' }}>See more</p>
         </Grid>
     )
 }
