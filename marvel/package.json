@@ -51,8 +51,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "@types/node": "^18.11.18"
+=======
+>>>>>>> 9c447150c330d90d58bab90210c8ba16f015f283
   }
 }
