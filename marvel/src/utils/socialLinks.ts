@@ -9,7 +9,7 @@ export const socialLinks = [
     {
         icon: GitHub,
         alt: "GitHub",
-        onClick: () => console.log("GitHub clicked"),
+        onClick: () => window.location.href = 'sssss',
     },
     {
         icon: Twitter,
