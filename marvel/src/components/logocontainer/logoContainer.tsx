@@ -9,12 +9,10 @@ const LogoContainer = () => {
         <Grid style={{ position: "fixed" }}>
             {socialLinks.map(({ icon, alt, onClick }) => (
                 <Grid item key={alt}>
-                    <Button className={classes.button} onClick={onClick}>
-                        {typeof icon === "string" ? (
+                    <Button onClick={onClick}>
+
                             <img className={classes.img} src={icon} alt={alt} style={{ height: 50, width: 50 }} />
-                        ) : (
-                            <icon.type style={{ height: 50, width: 50, color: "white" }} />
-                        )}
+
                     </Button>
                 </Grid>
             ))}

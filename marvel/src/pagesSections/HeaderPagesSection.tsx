@@ -8,7 +8,7 @@ const HeaderPagesSection = () => {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.containerHeader} container>
+    <Grid className={classes.containerHeader} container justifyContent="center">
       <div
         style={{ backgroundImage: `url(${MarvelHeader})` }}
         className={classes.container}

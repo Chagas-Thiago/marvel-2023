@@ -1,20 +1,23 @@
 import { makeStyles } from "@material-ui/core"
 
 const useStylesButton = makeStyles((theme) => ({
-
-    avatar: {
-        transition: '.2s',
-        width: 50,
-        height: 50,
-        objectFit: 'cover',
-        objectPosition: 'center',
+    button: {
+        height: 40,
+        boxShadow: '0px 0px 6px 0px grey',
+        marginBottom: 10,
+        marginTop: 20,
         "&:hover": {
             transform: 'scale(1.05)',
-            boxShadow: '0px 0px 10px red',
-
         },
     },
+    img: {
+        color: 'white',
+        width: 30,
+        height: 20
+    },
     text: {
+        textTransform: 'initial',
+        fontSize: 14,
         color: "white",
     }
 }))
