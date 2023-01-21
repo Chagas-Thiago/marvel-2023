@@ -57,7 +57,18 @@ const useStylesCards = makeStyles((theme) => ({
         position: "absolute",
         fontWeight: "bold"
     },
-
+    imgComics: {
+        transition: "all .2s ease-in-out",
+        borderRadius: 10,
+        cursor: "pointer",
+        marginBottom: "5%",
+        height: 350,
+        width: 270,
+        boxShadow: "0px 0px 9px 2px grey",
+        "&:hover": {
+            transform: "scale(1.1)",
+        },
+    }
 
 }))
 

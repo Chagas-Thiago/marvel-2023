@@ -3,14 +3,30 @@ import { Grid } from '@material-ui/core'
 import { IComics } from '../utils/type'
 import useStylesCards from './cards/cards.styles'
 
-const CardComics = (props: IComics) => {
+
+const CardComics = ({
+    title,
+    description,
+    images,
+    setImage,
+    setOpen,
+    setTitle,
+    setDescription
+}: any) => {
 
     const classes = useStylesCards()
-    const { title, description, images } = props
+
 
     return (
 
-        <Grid className={classes.containerCards} container>
+        <Grid onClick={() => {
+            setTitle(title)
+            setDescription(description)
+            setOpen(true)
+            setImage(images[0] && images[0].path + '.' + images[0].extension)
+
+        }} className={classes.containerCards} container>
+
             {/* {images.map((value =>
                 <img alt=""
                     className={classes.img}
@@ -19,15 +35,15 @@ const CardComics = (props: IComics) => {
             ))
             } */}
             <img alt=""
-                className={classes.img}
-                src={images[0].path + '.' + images[0].extension}
+                className={classes.imgComics}
+                src={images[0] && images[0].path + '.' + images[0].extension}
             />
-            <p className={classes.typography}>
+            {/* <p className={classes.typography}>
                 {description}
-            </p>
-            <div className={classes.face1} >
+            </p> */}
+            {/* <div className={classes.face1} >
                 {title}
-            </div>
+            </div> */}
 
         </Grid>
 
