@@ -1,11 +1,11 @@
 import { Grid } from '@material-ui/core'
-import MiddlePagesSection from '../pagesSections/MiddlePagesSection'
+import CharsPageSection from '../pagesSections/CharsPagesSection'
 
 function Home() {
 
   return (
-      <Grid >
-          <MiddlePagesSection />
+    <Grid container justifyContent='center'>
+      <CharsPageSection />
       </Grid>
   )
 }
