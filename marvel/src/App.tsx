@@ -3,6 +3,7 @@ import { useRoutes } from "react-router-dom"
 import Home from './pages/Home';
 import CharIdPage from './pages/CharIdPage';
 import HeaderPagesSection from './pagesSections/HeaderPagesSection';
+import Background from './components/background/background.js';
 
 function App() {
 
@@ -13,9 +14,11 @@ function App() {
  ]);
   
   return (
-  <>
-    <HeaderPagesSection/>
+    <>
+      <Background />
+      <HeaderPagesSection />
       {routes}
+
   </>
       )
 

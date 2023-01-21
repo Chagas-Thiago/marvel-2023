@@ -6,7 +6,7 @@ const useStylesCards = makeStyles((theme) => ({
         justifyContent: "center",
         cursor: "pointer",
         marginBottom: 20,
-
+        maxWidth: "fit-content",
 
         "&:hover div": {
             height: 350,
