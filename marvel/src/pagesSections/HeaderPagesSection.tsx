@@ -6,7 +6,7 @@ import ButtonCustom from "../components/button/button";
 
 const HeaderPagesSection = () => {
   const classes = useStyles();
-
+  console.log("ttt")
   return (
     <Grid className={classes.containerHeader} container justifyContent="center">
       <div
