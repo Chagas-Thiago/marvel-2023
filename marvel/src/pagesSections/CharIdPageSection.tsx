@@ -9,7 +9,7 @@ const CharIdPageSection = (data: { data: ICharacterCard }) => {
     const { thumbnail, description, name } = data.data
 
     return (
-        <Grid className={classes.container} container item xs={8}>
+        <Grid className={classes.container} container item xs={12} md={8}>
             <Grid item xs={6}>
                 <img
                     className={classes.img}
@@ -21,7 +21,7 @@ const CharIdPageSection = (data: { data: ICharacterCard }) => {
 
                 <p className={classes.name}>{name}</p>
 
-                <p className={classes.typography}>{description ? description : "No description provided by the Marvel API"}</p>
+                <p className={classes.typography}>{description || "No description provided by the Marvel API"}</p>
             </Grid>
         </Grid>
     )

@@ -4,7 +4,11 @@ const useStylesCharId = makeStyles((theme) => ({
     container: {
         backgroundColor: "#EBEBEB",
         boxShadow: "0px 0px 0px 8px white",
-        alignItems: "center"
+        alignItems: "center",
+        [theme.breakpoints.down("xs")]: {
+            marginTop: "2%",
+            marginBottom: "2%"
+        }
     },
     name: {
         textAlign: "center",

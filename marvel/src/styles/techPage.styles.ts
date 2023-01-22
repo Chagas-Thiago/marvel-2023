@@ -19,7 +19,7 @@ const useStylestechPäge = makeStyles((theme) => ({
         zIndex: 3,
         position: "absolute",
         justifyContent: "center",
-        marginTop: "3%"
+        marginTop: "3%",
     },
     root: {
         fontSize: 16

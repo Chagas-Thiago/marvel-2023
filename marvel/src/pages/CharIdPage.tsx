@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Grid } from '@material-ui/core'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
@@ -18,10 +18,10 @@ const CharIdPage = () => {
 
     const { state } = useLocation()
     const apiKey = process.env.REACT_APP_KEY
-    const getData = async () => {
+    const getData = useCallback(async () => {
         const { data, } = await axios.get<IDataComics>(`https://gateway.marvel.com:443/v1/public/characters/${state.id}/comics?apikey=${apiKey}`)
         return data.data.results
-    }
+    }, [apiKey, state.id])
     const { data, isLoading } = useQuery(
         ["getComics"],
         getData, { cacheTime: 0 }
@@ -37,11 +37,11 @@ const CharIdPage = () => {
                 description={description}
                 setOpen={setOpen}
             />
-            <Grid container justifyContent='center' item xs={10}>
+            <Grid container justifyContent='center' item xs={12} md={10}>
 
                 <CharIdPageSection data={state} />
 
-                <Grid container style={{ color: "white" }}>
+                <Grid container justifyContent='center' style={{ color: "white" }}>
                     {data && data.map((value) =>
                         <ComicsPageSection
                             data={value}

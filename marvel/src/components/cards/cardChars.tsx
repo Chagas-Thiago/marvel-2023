@@ -18,7 +18,7 @@ const CardChars = (props: ICharacterCard) => {
                 src={thumbnail}
             />
             <p className={classes.typography}>
-                {description ? description : "No description provided by the Marvel API"}
+                {description || "No description provided by the Marvel API"}
             </p>
             <div className={classes.face1} >
                 {name}

@@ -40,10 +40,10 @@ function Home() {
 
       <Grid container justifyContent='center'>
 
-        <Grid container justifyContent='flex-start' item xs={1}>
+        <Grid container justifyContent='center' item xs={2} md={1}>
           <LogoContainer />
         </Grid>
-        <Grid container item xs={10}>
+        <Grid container justifyContent='center' item xs={10} md={10}>
           {dataCharacter?.results.map((value, index: number) =>
             <CharsPageSection data={value} key={index} />
           )}

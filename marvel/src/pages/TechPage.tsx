@@ -3,17 +3,16 @@ import AnimationReact from '../components/animationReact/animationReact'
 import { techPng } from '../utils/techs'
 import useStylesTechPage from "../styles/techPage.styles"
 import { Grid, Tooltip } from '@material-ui/core'
-import { CSSTransition } from 'react-transition-group'
 
 const TechPage = () => {
 
   const classes = useStylesTechPage()
 
   return (
-    <CSSTransition classNames="bounce" in={true} timeout={500}>
-      <div>
 
-        <Grid container className={classes.containerImage}>
+    <Grid container justifyContent='center'>
+
+      <Grid container item xs={4} md={12} className={classes.containerImage}>
           {
             techPng.map((value =>
               <Tooltip
@@ -29,8 +28,8 @@ const TechPage = () => {
           }
         </Grid>
         {<AnimationReact />}
-      </div>
-    </CSSTransition>
+    </Grid>
+
   )
 }
 

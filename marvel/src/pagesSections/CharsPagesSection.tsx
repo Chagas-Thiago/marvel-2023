@@ -12,7 +12,7 @@ const CharsPageSection = (data: ICharCard, key: number) => {
 
   return (
 
-    <Grid container justifyContent='center' key={key} item xs={3} style={{ marginTop: "1%" }}>
+    <Grid container justifyContent='center' key={key} item xs={10} sm={6} md={3} style={{ marginTop: "1%" }}>
 
       <CardChars
         thumbnail={thumbnail.path + '.' + thumbnail.extension}

@@ -16,16 +16,17 @@ const CardComics = ({
 
 
     return (
-        <Grid onClick={() => {
+        <Grid
+            onClick={() => {
             setTitle(title)
             setDescription(description)
             setOpen(true)
-            setImage(images[0] && images[0].path + '.' + images[0].extension)
+                setImage(images[0]?.path + '.' + images[0]?.extension)
 
         }} className={classes.containerCards} container>
             <img alt=""
                 className={classes.imgComics}
-                src={images[0] && images[0].path + '.' + images[0].extension}
+                src={images[0]?.path + '.' + images[0]?.extension}
             />
         </Grid>
 
