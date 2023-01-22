@@ -21,7 +21,7 @@ const CharIdPageSection = (data: { data: ICharacterCard }) => {
 
                 <p className={classes.name}>{name}</p>
 
-                <p className={classes.typography}>{description}</p>
+                <p className={classes.typography}>{description ? description : "No description provided by the Marvel API"}</p>
             </Grid>
         </Grid>
     )

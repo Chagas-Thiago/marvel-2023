@@ -28,7 +28,7 @@ const CharIdPage = () => {
     )
 
     return isLoading ? null : (
-        <Grid container justifyContent='center' item>
+        <Grid style={{ marginTop: "2%" }} container justifyContent='center' item>
 
             <CustomModal
                 open={open}

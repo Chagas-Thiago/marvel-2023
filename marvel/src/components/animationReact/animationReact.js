@@ -5,13 +5,15 @@ import { Trail, Float, Line, Sphere, Stars } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 
 export default function AnimationReact() {
+
+  const MAX_HEIGHT = window.innerHeight
   return (
-    <Canvas style={{ display: "contents" }} camera={{ position: [0, 0, 10] }}>
-      <color attach="background" args={['black']} />
+    <Canvas style={{ height: MAX_HEIGHT - 110, position: "absolute", zIndex: 2 }} camera={{ position: [0, 0, 10] }}>
+      {/* <color attach="background" args={['black']} /> */}
       <Float speed={4} rotationIntensity={1} floatIntensity={2}>
         <Atom />
       </Float>
-      <Stars saturation={0} count={400} speed={0.5} />
+      {/* <Stars saturation={0} count={400} speed={0.5} /> */}
       <EffectComposer>
         <Bloom mipmapBlur luminanceThreshold={1} radius={0.7} />
       </EffectComposer>
