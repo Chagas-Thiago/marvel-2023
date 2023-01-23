@@ -47,7 +47,7 @@ const CustomModal = ({ open, setOpen, image, title, description }: IModal) => {
                 <Grid style={{ padding: 10 }} item xs={9}>
                     <p style={{
                         textAlign: "center",
-                        color: "red",
+                        color: "#B22234",
                         fontSize: 30,
                         fontWeight: "bold",
                         textShadow: "black 1px 0 2px"

@@ -1,17 +1,17 @@
 import { Button, Grid } from '@material-ui/core'
 import { socialLinks } from '../../utils/socialLinks'
-import useStylesLogoContainer from '../logocontainer/logoContainer.styles';
+import useStylesMySocialMedia from './mySocialMedia.styles';
 
 
-const LogoContainer = () => {
-    const classes = useStylesLogoContainer()
+const MySocialMedia = () => {
+    const classes = useStylesMySocialMedia()
     return (
-        <Grid style={{ position: "fixed" }}>
+        <Grid className={classes.containerSocialLinks}>
             {socialLinks.map(({ icon, alt, onClick }) => (
                 <Grid item key={alt}>
                     <Button onClick={onClick}>
 
-                            <img className={classes.img} src={icon} alt={alt} style={{ height: 50, width: 50 }} />
+                        <img className={classes.img} src={icon} alt={alt} />
 
                     </Button>
                 </Grid>
@@ -20,4 +20,4 @@ const LogoContainer = () => {
     );
 };
 
-export default LogoContainer;
+export default MySocialMedia;

@@ -1,58 +1,33 @@
-import CharsPageSection from '../pagesSections/CharsPagesSection'
-import React, { useCallback, useEffect, useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 import { Grid } from '@material-ui/core'
-import { Idata } from '../utils/type'
-import PaginationButtons from '../components/paginationButtons/paginationButtons'
-import LogoContainer from '../components/logocontainer/logoContainer'
-import ButtonCustom from '../components/button/button'
 import Background from '../components/background/background'
+import ButtonCustom from '../components/button/button'
+import Spider from "../assets/spiderman.gif"
+import MySocialMedia from '../components/logocontainer/mySocialMedia'
 
-function Home() {
-  const [pagination, setPagination] = useState(8)
+const HomePage = () => {
+    return (
+        <Grid container >
+            <Background />
 
-  const apiKey = process.env.REACT_APP_KEY
+            <Grid container justifyContent='center'>
+                <p style={{
 
-  const getData = useCallback(async () => {
-    const { data } = await axios.get<Idata>(`https://gateway.marvel.com:443/v1/public/characters?limit=${pagination}&apikey=${apiKey}`)
-    return data.data
-  }, [apiKey, pagination])
+                    textAlign: "center",
+                    color: "#B22234",
+                    fontSize: 30,
+                    fontWeight: "bold",
+                    textShadow: "black 1px 0 2px"
 
+                }}>This site is a project developed for Marvel API developers, featuring a list of characters and their corresponding comics.</p>
+            </Grid>
 
-  const { data: dataCharacter, isLoading, refetch } = useQuery(["getAllData"], getData, {
-    onError: (error: Error) => {
-      console.log(error)
-    }
-  })
-
-  useEffect(() => {
-    refetch()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pagination])
-
-  return isLoading ? null : (
-    <>
-      <Background />
-      <Grid container justifyContent="center">
-        <ButtonCustom />
-      </Grid>
-
-      <Grid container justifyContent='center'>
-
-        <Grid container justifyContent='center' item xs={2} md={1}>
-          <LogoContainer />
+            <ButtonCustom />
+            <Grid container justifyContent='center'>
+                <img src={Spider} alt="spider-man" />
+            </Grid>
+            <MySocialMedia />
         </Grid>
-        <Grid container justifyContent='center' item xs={10} md={10}>
-          {dataCharacter?.results.map((value, index: number) =>
-            <CharsPageSection data={value} key={index} />
-          )}
-        </Grid>
-        <PaginationButtons
-          setPagination={setPagination} pagination={pagination} />
-      </Grid>
-    </>
   )
 }
 
-export default Home
+export default HomePage

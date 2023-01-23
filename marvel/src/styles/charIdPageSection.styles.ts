@@ -12,7 +12,7 @@ const useStylesCharId = makeStyles((theme) => ({
     },
     name: {
         textAlign: "center",
-        color: "red",
+        color: "#B22234",
         fontSize: 30,
         fontWeight: "bold",
         textShadow: "black 1px 0 2px"

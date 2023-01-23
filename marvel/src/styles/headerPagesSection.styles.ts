@@ -10,6 +10,9 @@ const useStylesHeader = makeStyles((theme) => ({
     containerHeader: {
 
         justifyContent: "center",
+        [theme.breakpoints.down("sm")]: {
+            marginBottom: "5%"
+        }
 
     },
     container: {

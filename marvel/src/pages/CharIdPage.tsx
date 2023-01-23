@@ -18,6 +18,7 @@ const CharIdPage = () => {
 
     const { state } = useLocation()
     const apiKey = process.env.REACT_APP_KEY
+
     const getData = useCallback(async () => {
         const { data, } = await axios.get<IDataComics>(`https://gateway.marvel.com:443/v1/public/characters/${state.id}/comics?apikey=${apiKey}`)
         return data.data.results
@@ -40,6 +41,16 @@ const CharIdPage = () => {
             <Grid container justifyContent='center' item xs={12} md={10}>
 
                 <CharIdPageSection data={state} />
+
+                <Grid container justifyContent='center'>
+                    <p style={{
+                        textAlign: "center",
+                        color: "red",
+                        fontSize: 30,
+                        fontWeight: "bold",
+                        textShadow: "black 1px 0 2px"
+                    }}>Char is featured in the following comics</p>
+                </Grid>
 
                 <Grid container justifyContent='center' style={{ color: "white" }}>
                     {data && data.map((value) =>
